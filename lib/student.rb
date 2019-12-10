@@ -84,7 +84,7 @@ class Student
     binding.pry
     arr = DB[:conn].execute(sql,x).map do |row|
       self.new_from_db(row)
-    end.first
+    end
     binding.pry
   end	
     
