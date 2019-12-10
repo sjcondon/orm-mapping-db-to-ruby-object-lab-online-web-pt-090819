@@ -81,11 +81,9 @@ class Student
     SELECT * FROM students WHERE students.grade = 10
     LIMIT ?
     SQL
-    binding.pry
     arr = DB[:conn].execute(sql,x).map do |row|
       self.new_from_db(row)
-    end
-    binding.pry
+    en
   end	
     
 end
